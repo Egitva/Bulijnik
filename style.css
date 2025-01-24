@@ -23,3 +23,21 @@
 	padding: 2 2px;
 	background: rgb(225,225,225);
 }
+.dot{
+	border-bottom: 1px dotted;
+    text-decoration: none;
+    display: inline-block;
+    height: 1em;
+    line-height: 1.05em;
+}
+.coder{
+	color: red;
+	background: rgb(180,180,180);
+}
+.back2{
+	background: rgb(150,150,150);
+}
+.tag{
+	color: blue;
+	background: rgb(180,180,180);
+}
