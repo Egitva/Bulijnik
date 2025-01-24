@@ -1,0 +1,25 @@
+/**/
+.post-info {
+	color: grey;
+}
+.post {
+	display: flex;
+}
+.upper {
+	color: blue;
+}
+.upper2 {
+	color: grey;
+}
+.C1 {
+	display: flex;
+}
+.rer {
+	color: red;
+	padding: 2 2px;
+	background: rgb(225,225,225);
+}
+.blob{
+	padding: 2 2px;
+	background: rgb(225,225,225);
+}
