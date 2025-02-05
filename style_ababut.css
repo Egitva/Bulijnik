@@ -1,0 +1,19 @@
+.block_about img{
+	border-radius: 20%;
+	border: 2px solid #ddd;
+}
+
+.alignleft{
+	float: left;
+	margin-left: 15px;
+}
+
+body {
+	margin: 4px auto;
+	width: 1000px;
+	font-family: "Oswald", serif;
+	font-optical-sizing: auto;
+	font-weight: 200;
+	font-style: normal;
+  }
+  

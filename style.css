@@ -1,12 +1,32 @@
-/**/
+/*
+background-color: red 
+background-image: url()
+beckground-repeat: repeat 
+background-position: center
+*/
+header {
+	display: flex;
+	background: rgb(255, 255, 255);
+}
+
+body {
+	background-image: url(images/Внешний_Долг.png);
+	background-repeat: repeat;
+	background-position: center;
+	font-family: "Oswald", serif;
+	font-optical-sizing: auto;
+	font-weight: 200;
+	font-style: normal;
+}
+
 .post-info {
 	color: grey;
 }
 .post {
 	display: flex;
 	background: rgb(225,225,225);
-	border 2px solid black
-	border radius: 2px
+	border: 2px solid black;
+	border-radius: 2px;
 	padding: 5px 20px 10px 10px;
 }
 .upper {
