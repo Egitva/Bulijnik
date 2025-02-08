@@ -69,3 +69,57 @@ body {
 .lis{
 	list-style-type:none;
 }
+.lis2{
+	padding: 7;
+	background-color: aqua;
+}
+.lis2_2{
+	padding: 7;
+	background-color:aquamarine;
+}
+.lis2_3{
+	padding: 7;
+	background-color: gainsboro;
+}
+.ceboks{
+	padding: 0 10;
+}
+.lisone{
+	background-color: rgb(220, 130, 130);
+	padding: 20 20;
+}
+.lis1{
+	padding: 0 15;
+	background-color: rgb(200, 60, 60);
+	color: white;
+}
+.bor{
+	padding: 10 0;
+	margin-left: 10;
+	margin-right: 1200;
+	background-color: rgb(140, 60, 60);
+}
+.bor2{
+	padding: 10 0;
+	margin-left: 10;
+	margin-right: 1180;
+	background-color: rgb(140, 60, 60);
+}
+.bor3{
+	padding: 10 0;
+	margin-left: 10;
+	margin-right: 1160;
+	background-color: rgb(140, 60, 60);
+}
+.bor4{
+	padding: 10 0;
+	margin-left: 10;
+	margin-right: 1220;
+	background-color: rgb(140, 60, 60);
+}
+.bor5{
+	padding: 10 0;
+	margin-left: 10;
+	margin-right: 1195;
+	background-color: rgb(140, 60, 60);
+}
