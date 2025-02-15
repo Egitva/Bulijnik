@@ -129,3 +129,69 @@ body {
 .sdva{
 	background-color: white;
 }
+.holod{
+	display: flex;
+	width: 80%;
+	margin: 0 auto;
+	flex-wrap: wrap;
+}
+.objectHol{
+	background-color: white;
+	padding: 10 10;
+	text-align: center;
+	font-size: 15;
+	border: 1px solid gray;
+	border-radius: 10px;
+	border-spacing: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.listed{
+	display: flex;
+	padding: 20 20;
+	background: rgb(85, 85, 85);
+	color: white;
+	width: 17%;
+}
+.listed img{
+	margin-right: 20;
+}
+.listed:hover{
+	background: rgb(41, 41, 41);
+}
+.header3{
+	color: white;
+	background-color: brown;
+	padding: 25 50;
+}
+.menu3{
+	color: white;
+	background-color: rgb(53, 11, 11);
+	padding: 10 50;
+}
+.aside03{
+	float: left;
+}
+.aside13{
+	color: white;
+	background-color: rgb(100, 25, 25);
+	padding: 25 50;
+}
+.aside23{
+	color: white;
+	background-color: rgb(100, 25, 25);
+	padding: 45 50;
+}
+.aside33{
+	color: white;
+	background-color: rgb(100, 25, 25);
+	padding: 80 20;
+	float: right;
+}
+.footer3{
+	color: white;
+	background-color: rgb(53, 11, 11);
+	padding: 10 50;
+}
