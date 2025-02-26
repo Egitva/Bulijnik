@@ -195,3 +195,12 @@ body {
 	background-color: rgb(53, 11, 11);
 	padding: 10 50;
 }
+.blue{
+	background-color: aqua;
+}
+.buttons{
+	display: flex;
+	width: 80%;
+	margin: 0 auto;
+	flex-wrap: wrap;
+}
