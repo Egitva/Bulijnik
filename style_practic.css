@@ -209,3 +209,9 @@ table{
 	margin: 0 auto;
 	flex-wrap: wrap;
 }
+.notifbutton{
+	width: 200;
+	height: 200;
+	background-color: black;
+	color: white;
+}
