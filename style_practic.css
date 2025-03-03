@@ -215,3 +215,14 @@ table{
 	background-color: black;
 	color: white;
 }
+.sect a{
+	background-color: black;
+	text-decoration: none;
+	color: white;
+	padding: 20 20;
+	font-size: 25;
+	margin-top: 30;
+}
+.sect{
+	margin-top: 30;
+}
