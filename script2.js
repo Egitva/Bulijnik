@@ -1,5 +1,6 @@
 danila = document.getElementById('danila');
 danila2 = document.getElementById('danila2');
+danila3 = document.getElementById('danila3');
 danila.onclick = function() {
     // 1
 let userName = prompt("Введите ваше имя:");
@@ -57,6 +58,7 @@ let userNumber = parseInt(prompt("Введите целое число:"));
 let isEven = (userNumber % 2 === 0);
 alert(`Число ${userNumber} является ${isEven ? "четным" : "нечетным"}.`);
 }
+
 //2 pract
 danila2.onclick = function() {
     let number = parseFloat(prompt("Введите число:"));
@@ -110,4 +112,141 @@ alert("Новое число: " + newNumber);
 let sales = parseFloat(prompt("Введите общую сумму продаж за месяц:"));
 let salary = 250 + (sales * 0.1);
 alert("Зарплата работника: $" + salary.toFixed(2));
+}
+
+danila3.onclick = function() {
+    let number = prompt("Введите число:");
+    if (number > 0) {
+        alert("Число положительное");
+    } 
+    else if (number < 0) {
+        alert("Число отрицательное");
+    } 
+    else {
+        alert("Число равно нулю");
+    }
+    let age = prompt("Введите ваш возраст:");
+    if (age >= 0 && age <= 120) {
+        alert("Возраст корректен");
+    } 
+    else {
+        alert("Возраст некорректен");
+    }
+    let number2 = prompt("Введите число:");
+    let absoluteValue = Math.abs(number2);
+    alert("Модуль числа: " + absoluteValue);
+    let hours = prompt("Введите часы:");
+    let minutes = prompt("Введите минуты:");
+    let seconds = prompt("Введите секунды:");
+ 
+    if (hours >= 0 && hours < 24 && minutes >= 0 && minutes < 60 && seconds >= 0 && seconds < 60) {
+        alert("Время корректно");
+    } 
+    else {
+        alert("Время некорректно");
+    }
+    let x = prompt("Введите координату x:");
+    let y = prompt("Введите координату y:");
+ 
+    if (x > 0 && y > 0) {
+        alert("Точка находится в первой четверти");
+    } 
+    else if (x < 0 && y > 0) {
+        alert("Точка находится во второй четверти");
+    } 
+    else if (x < 0 && y < 0) {
+        alert("Точка находится в третьей четверти");
+    } 
+    else if (x > 0 && y < 0) {
+        alert("Точка находится в четвертой четверти");
+    } 
+    else if (x == 0 && y != 0) {
+        alert("Точка находится на оси Y");
+    } 
+    else if (y == 0 && x != 0) {
+        alert("Точка находится на оси X");
+    } 
+    else {
+        alert("Точка находится в начале координат");
+    }
+
+    //switch  
+
+    let monthNumber = prompt("Введите номер месяца (1-12):");
+    switch (monthNumber) {
+        case "1":
+            alert("Январь");
+            break;
+        case "2":
+            alert("Февраль");
+            break;
+        case "3":
+            alert("Март");
+            break;
+        case "4":
+            alert("Апрель");
+            break;
+        case "5":
+            alert("Май");
+            break;
+        case "6":
+            alert("Июнь");
+            break;
+        case "7":
+            alert("Июль");
+            break;
+        case "8":
+            alert("Август");
+            break;
+        case "9":
+            alert("Сентябрь");
+            break;
+        case "10":
+            alert("Октябрь");
+            break;
+        case "11":
+            alert("Ноябрь");
+            break;
+        case "12":
+            alert("Декабрь");
+            break;
+        default:
+            alert("Некорректный номер месяца");
+    }
+    
+    let num1 = parseFloat(prompt("Введите первое число:"));
+    let num2 = parseFloat(prompt("Введите второе число:"));
+    let operator = prompt("Введите знак операции (+, -, *, /):");
+ 
+    switch (operator) {
+        case "+":
+            alert("Результат: " + (num1 + num2));
+            break;
+        case "-":
+            alert("Результат: " + (num1 - num2));
+            break;
+        case "*":
+            alert("Результат: " + (num1 * num2));
+            break;
+        case "/":
+            alert("Результат: " + (num1 / num2));
+            break;
+        default:
+            alert("Некорректный оператор");
+    }
+    
+    let num11 = prompt("Введите первое число:");
+    let num21 = prompt("Введите второе число:");
+    let largerNumber = (num11 > num21) ? num11 : num21;
+    alert("Большее число: " + largerNumber);
+
+    //dfkwo
+
+    let number3 = prompt("Введите число:");
+    let isMultipleOf5 = (number3 % 5 === 0) ? "Кратно 5" : "Не кратно 5";
+    alert(isMultipleOf5);
+    
+    let planet = prompt("Введите название планеты:").toLowerCase();
+    let greeting = (planet === "земля") ? "Привет, землянин!" : "Привет, инопланетянин!";
+    alert(greeting); 
 }
