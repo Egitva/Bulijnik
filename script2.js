@@ -1,6 +1,7 @@
 danila = document.getElementById('danila');
 danila2 = document.getElementById('danila2');
 danila3 = document.getElementById('danila3');
+danila4 = document.getElementById('danila4');
 danila.onclick = function() {
     // 1
 let userName = prompt("Введите ваше имя:");
@@ -249,4 +250,82 @@ danila3.onclick = function() {
     let planet = prompt("Введите название планеты:").toLowerCase();
     let greeting = (planet === "земля") ? "Привет, землянин!" : "Привет, инопланетянин!";
     alert(greeting); 
+}
+danila4.onclick = function() {
+    let count0 = parseInt(prompt("Введите количество символов #:"));
+let i = 0;
+while (i < count0) {
+    alert("# ");
+    i++;
+}
+    let number = parseInt(prompt("Введите число:"));
+while (number >= 0) {
+    alert(number + " ");
+    number--;
+}
+let num0 = parseFloat(prompt("Введите число:"));
+let power = parseInt(prompt("Введите степень:"));
+let result = 1;
+let i1 = 0;
+while (i1 < power) {
+    result *= num0;
+    i1++;
+}
+alert(`Результат: ${result}`);
+let num1 = parseInt(prompt("Введите первое число:"));
+let num2 = parseInt(prompt("Введите второе число:"));
+let min = Math.min(num1, num2);
+let i2 = 1;
+alert(`Общие делители ${num1} и ${num2}: `);
+while (i2 <= min) {
+    if (num1 % i2 === 0 && num2 % i2 === 0) {
+        alert(i2 + " ");
+    }
+    i2++;
+}
+let num3 = parseInt(prompt("Введите число:"));
+let factorial = 1;
+let i3 = 1;
+while (i3 <= num3) {
+    factorial *= i3;
+    i3++;
+}
+alert(`Факториал ${num3} равен ${factorial}`);
+//
+
+let answer;
+do {
+    answer = parseInt(prompt("Решите пример: 2 + 2 * 2 ="));
+    if (answer !== 6) {
+        alert("Неверно! Попробуйте еще раз.");
+    }
+} while (answer !== 6);
+alert("Правильно!");
+let num = 1000;
+let count = 0;
+do {
+    num /= 2;
+    count++;
+} while (num >= 50);
+alert(`Результат: ${num}, количество делений: ${count}`);
+let divisor = parseInt(prompt("Введите число:"));
+alert(`Числа от 1 до 100, кратные ${divisor}: `);
+for (let i = 1; i <= 100; i++) {
+    if (i % divisor === 0) {
+        alert(i + " ");
+    }
+}
+let num5 = parseInt(prompt("Введите число:"));
+let isPrime = true;
+if (num5 <= 1) {
+    isPrime = false;
+} else {
+    for (let i = 2; i <= Math.sqrt(num5); i++) {
+        if (num5 % i === 0) {
+            isPrime = false;
+            break;
+        }
+    }
+}
+alert(`${num5} ${isPrime ? "является" : "не является"} простым числом`);
 }
