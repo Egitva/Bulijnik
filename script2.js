@@ -2,6 +2,7 @@ danila = document.getElementById('danila');
 danila2 = document.getElementById('danila2');
 danila3 = document.getElementById('danila3');
 danila4 = document.getElementById('danila4');
+danila5 = document.getElementById('danila5');
 danila.onclick = function() {
     // 1
 let userName = prompt("Введите ваше имя:");
@@ -328,4 +329,119 @@ if (num5 <= 1) {
     }
 }
 alert(`${num5} ${isPrime ? "является" : "не является"} простым числом`);
+}
+danila5.onclick = function() {
+    // 1. Функция, которая возвращает меньшее из двух чисел
+function getMin(a, b) {
+    return a < b ? a : b;
+}
+
+// 2. Функция возведения числа в степень
+function power(base, exponent) {
+    let result = 1;
+    for (let i = 0; i < exponent; i++) {
+        result *= base;
+    }
+    return result;
+}
+
+// 3. Функция калькулятора
+function calculate(a, b, operator) {
+    switch (operator) {
+        case '+': return a + b;
+        case '-': return a - b;
+        case '*': return a * b;
+        case '/': return a / b;
+        default: return NaN;
+    }
+}
+
+// 4. Функция проверки числа на простоту
+function isPrime(num) {
+    if (num <= 1) return false;
+    if (num === 2) return true;
+    if (num % 2 === 0) return false;
+    
+    for (let i = 3; i <= Math.sqrt(num); i += 2) {
+        if (num % i === 0) return false;
+    }
+    return true;
+}
+
+// 5. Функция вывода таблицы умножения
+function multiplicationTable(n) {
+    let table = '';
+    for (let i = 1; i <= 10; i++) {
+        table += `${n} * ${i} = ${n * i}\n`;
+    }
+    return table;
+}
+
+// 6. Функция остатка от деления без использования %
+function modulus(a, b) {
+    return a - Math.floor(a / b) * b;
+}
+
+// 7. Функция суммы от 1 до 5 чисел
+function sumNumbers(...numbers) {
+    return numbers.reduce((sum, num) => sum + num, 0);
+}
+
+// 8. Функция возвращающая максимальное из 1-5 чисел
+function getMax(...numbers) {
+    return Math.max(...numbers);
+}
+
+// 9. Функция вывода четных/нечетных чисел в диапазоне
+function printEvenOdd(start, end, isEven) {
+    let result = '';
+    for (let i = start; i <= end; i++) {
+        if ((i % 2 === 0) === isEven) {
+            result += i + ' ';
+        }
+    }
+    return result;
+}
+
+// 10. Функция для определения високосного года
+function isLeapYear(year) {
+    return (year % 400 === 0) || (year % 100 !== 0 && year % 4 === 0);
+}
+
+// 10. Функция получения следующей даты
+function getNextDate(day, month, year) {
+    const daysInMonth = [
+        31, isLeapYear(year) ? 29 : 28, 31, 30, 31, 30, 
+        31, 31, 30, 31, 30, 31
+    ];
+    
+    day++;
+    if (day > daysInMonth[month - 1]) {
+        day = 1;
+        month++;
+        if (month > 12) {
+            month = 1;
+            year++;
+        }
+    }
+    
+    return `${day.toString().padStart(2, '0')}.${month.toString().padStart(2, '0')}.${year}`;
+}
+
+// Демонстрация работы функций
+alert('1. Минимальное: ' + getMin(parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру"))));
+alert('2. в степени: ' + power(parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру"))));
+alert('3. сумма: ' + calculate(parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру")), '+'));
+alert('4. Число простое? ' + isPrime(parseInt(prompt("введите цифру"))));
+alert('5. Таблица умножения:\n' + multiplicationTable(parseInt(prompt("введите цифру"))));
+alert('6. Остаток от деления: ' + modulus(parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру"))));
+alert('7. Сумма чисел: ' + sumNumbers(parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру"))));
+alert('8. Максимальное: ' + getMax(parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру"))));
+alert('9. Четные числа от: ' + printEvenOdd(parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру")), true));
+alert('10. Следующий день после: ' + getNextDate(parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру"))));
+
+// Вывод таблиц умножения для чисел от 2 до 9
+for (let i = 2; i <= 9; i++) {
+    alert(`Таблица умножения для ${i}:\n${multiplicationTable(i)}`);
+}
 }
