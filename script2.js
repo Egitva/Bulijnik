@@ -3,6 +3,7 @@ danila2 = document.getElementById('danila2');
 danila3 = document.getElementById('danila3');
 danila4 = document.getElementById('danila4');
 danila5 = document.getElementById('danila5');
+danila6 = document.getElementById('danila6');
 danila.onclick = function() {
     // 1
 let userName = prompt("Введите ваше имя:");
@@ -428,7 +429,6 @@ function getNextDate(day, month, year) {
     return `${day.toString().padStart(2, '0')}.${month.toString().padStart(2, '0')}.${year}`;
 }
 
-// Демонстрация работы функций
 alert('1. Минимальное: ' + getMin(parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру"))));
 alert('2. в степени: ' + power(parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру"))));
 alert('3. сумма: ' + calculate(parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру")), '+'));
@@ -440,8 +440,83 @@ alert('8. Максимальное: ' + getMax(parseInt(prompt("введите �
 alert('9. Четные числа от: ' + printEvenOdd(parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру")), true));
 alert('10. Следующий день после: ' + getNextDate(parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру")), parseInt(prompt("введите цифру"))));
 
-// Вывод таблиц умножения для чисел от 2 до 9
 for (let i = 2; i <= 9; i++) {
     alert(`Таблица умножения для ${i}:\n${multiplicationTable(i)}`);
 }
+}
+danila6.onclick = function() {
+    function factorial(n) {
+        if (n === 0 || n === 1) {
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+        }
+    }
+    
+    const num1 = parseInt(prompt("Введите число для вычисления факториала:"));
+    alert(`Факториал числа ${num1} равен ${factorial(num1)}`);
+    function printRangeAsc(start, end) {
+        if (start > end) {
+            return;
+        }
+        alert(start);
+        printRangeAsc(start + 1, end);
+    }
+    
+    function printRangeDesc(start, end) {
+        if (start > end) {
+            return;
+        }
+        printRangeDesc(start + 1, end);
+        alert(start);
+    }
+    
+    const start = parseInt(prompt("Введите начало диапазона:"));
+    const end = parseInt(prompt("Введите конец диапазона:"));
+    
+    alert("Числа в прямом порядке:");
+    printRangeAsc(start, end);
+    
+    alert("Числа в обратном порядке:");
+    printRangeDesc(start, end);
+    function reverseNumber(n, reversed = 0) {
+        if (n === 0) {
+            return reversed;
+        } else {
+            return reverseNumber(Math.floor(n / 10), reversed * 10 + n % 10);
+        }
+    }
+    
+    const num2 = parseInt(prompt("Введите число для разворота:"));
+    alert(`Число ${num2} задом наперед: ${reverseNumber(num2)}`);
+    function sumDigits(n) {
+        if (n === 0) {
+            return 0;
+        } else {
+            return n % 10 + sumDigits(Math.floor(n / 10));
+        }
+    }
+    
+    const num3 = parseInt(prompt("Введите число для подсчета суммы цифр:"));
+    alert(`Сумма цифр числа ${num3} равна ${sumDigits(num3)}`);
+    function nestedParentheses(n) {
+        if (n === 0) {
+            return "";
+        } else {
+            return "(" + nestedParentheses(n - 1) + ")";
+        }
+    }
+    
+    const num4 = parseInt(prompt("Введите количество вложенных скобок:"));
+    alert(`Вложенные скобки: ${nestedParentheses(num4)}`);
+    function nestedParentheses(n) {
+        if (n === 0) {
+            return "";
+        } else {
+            return "(" + nestedParentheses(n - 1) + ")";
+        }
+    }
+    
+    const num = parseInt(prompt("Введите количество вложенных скобок:"));
+    alert(`Вложенные скобки: ${nestedParentheses(num)}`);
 }
