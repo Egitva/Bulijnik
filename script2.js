@@ -4,6 +4,32 @@ danila3 = document.getElementById('danila3');
 danila4 = document.getElementById('danila4');
 danila5 = document.getElementById('danila5');
 danila6 = document.getElementById('danila6');
+danila7 = document.getElementById('danila7');
+class PrintMachine{
+    constructor(size, color, family) {
+        this.size = size;
+        this.color = color;
+        this.family = family;
+    }
+    print(user) {
+        document.write(`<p style='font-family:${this.family};
+            font-size:${this.size};
+            color:${this.color}'>${user}</p>`);
+    }
+}
+class PostMade{
+    constructor(day,month,year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+    }
+    Post(title, text, tag) {
+        document.write(`<h1>${title}</h1>`);
+        document.write(`<p style='font-size:${14}'>${day}</p>`);
+        document.write(`<p style='font-size:${16}'>${text}</p>`);
+        document.write(`<p style='font-size:${18}'>${tag}</p>`);
+    }
+}
 danila.onclick = function() {
     // 1
 let userName = prompt("Введите ваше имя:");
