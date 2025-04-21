@@ -1,12 +1,11 @@
 /*
-background-color: red 
 background-image: url()
 beckground-repeat: repeat 
 background-position: center
 */
 header {
 	display: flex;
-	background: rgb(255, 255, 255);
+	background-image: rgb(255, 255, 255);
 	background-repeat: repeat;
 	background-position: center;
 	margin-left: 50px; 
