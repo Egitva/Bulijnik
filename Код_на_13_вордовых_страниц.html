@@ -1,0 +1,101 @@
+<html>
+<head>
+    <meta charset ='utf-8'>
+    <link rel='stylesheet' href='Код_на_13_вордовых_страниц.css'>
+    <title>Buliga</title>
+</head>
+<header>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+    </style>
+    <div class='logo-image'>
+        <a href="index.html">
+            <img src="images/logo.jpg" class="alignleft" alt="RIGHT photo" width="100">
+        </a>
+    </div>
+    <div>
+        <h1>Buliga Oficial Site</h1>
+    </div>
+    <img src="images/Кот.gif" class="gifer" alt="gif" width="50" height="50">
+</header>
+<body>
+    <div class="trackbar-container">
+        <div class="trackbar" id="trackbar">
+            <div class="trackbar-indicator" id="indicator"></div>
+        </div>
+        <div class="trackbar-value">Значение: <span id="value">0</span>%</div>
+    </div>
+    <div class="gallery-container">
+        <img id="galleryImage" class="gallery-image" src="" alt="Gallery Image">
+        <div class="gallery-controls">
+            <button id="prevBtn">Назад</button>
+            <button id="nextBtn">Вперед</button>
+        </div>
+    </div>
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-header">What is Lorem Ipsum?</div>
+            <div class="accordion-content">
+                <div class="accordion-content-inner">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion-item">
+            <div class="accordion-header">Why do we use it?</div>
+            <div class="accordion-content">
+                <div class="accordion-content-inner">
+                    It is a long established fact that a reader will be distracted by the readable 
+                    content of a page when looking at its layout. The point of using Lorem Ipsum 
+                    is that it has a more-or-less normal distribution of letters.
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion-item">
+            <div class="accordion-header">Where does it come from?</div>
+            <div class="accordion-content">
+                <div class="accordion-content-inner">
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. 
+                    It has roots in a piece of classical Latin literature from 45 BC.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="news-container">
+        <h2>Последние новости</h2>
+        <div id="newsList"></div>
+        <button id="loadMoreBtn" class="load-more">Загрузить еще</button>
+        <div id="loading" class="loading">Загрузка...</div>
+    </div>
+    <div class="calendar-container">
+        <div class="calendar-controls">
+            <label>Месяц:</label>
+            <input type="number" id="monthInput" min="1" max="12" value="8">
+            <label>Год:</label>
+            <input type="number" id="yearInput" value="2018">
+            <button id="generateBtn">Сгенерировать</button>
+        </div>
+        
+        <div id="monthYearDisplay" class="month-year">August, 2018</div>
+        
+        <table class="calendar" id="calendarTable">
+            <thead>
+                <tr>
+                    <th>ПН</th>
+                    <th>ВТ</th>
+                    <th>СР</th>
+                    <th>ЧТ</th>
+                    <th>ПТ</th>
+                    <th>СБ</th>
+                    <th>ВС</th>
+                </tr>
+            </thead>
+            <tbody id="calendarBody"></tbody>
+        </table>
+    </div>
+    <script src="Код_на_13_вордовых_страниц.js"></script>
+</body>
+</html>
